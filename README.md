@@ -11,7 +11,7 @@
 
 # Ejercicios herencia y especificidad
 
-- 2.2.1 Selectores CSS
+- 2.2.1 Selectores CSSgit
 - 2.3.2 Herencias de CSS
 - 2.3.3 Conociendo la especifidad
 
