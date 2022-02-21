@@ -18,3 +18,12 @@
 # Ejercicio decolores y Background
 
 - 2.4 Trabajamos una imagen con fondos diferentes
+
+# Ejercicios sobre Modelo de caja y herramientas
+
+- Modelo de caja:
+- 3.1.1 Marcando
+- 3.1.2 Displays
+- 3.1.3 Imagén de párrafo
+- 3.1.4 Imagen enre párrafos
+- 3.1.5 Ajustando imágenes

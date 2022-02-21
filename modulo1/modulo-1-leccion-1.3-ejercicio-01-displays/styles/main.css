@@ -1,0 +1,19 @@
+/* .block {
+  height: 10px;
+  width: 100px;
+  display: block;
+} */
+.inline {
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  display: inline;
+}
+/* Por defecto la etiqueta div esta inline  */
+
+/* Se ajusta el coontenido al alto y ancho establecido */
+.inline-block {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
