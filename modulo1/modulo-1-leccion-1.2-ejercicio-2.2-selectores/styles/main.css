@@ -1,0 +1,74 @@
+/* NO TOCAR ESTOS ESTILOS */
+/* ul.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+a {
+  color: red;
+}
+ul.news li.news__item {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 10px;
+}
+ul.news li.news__item + li.news__item {
+  border-top: 1px solid #ccc;
+}
+ul.news li.news__item:nth-child(2n) {
+  background: #eee;
+}
+ul.news li.news__item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+ul.news li.news__item h2.news__item-title {
+  margin: 0 0 0.25em;
+  font-size: 20px;
+}
+ul.news li.news__item a.news__item-link {
+  color: green;
+} */
+/* NO TOCAR ESTOS ESTILOS */
+
+/* Nuevos estilos a partir de esta línea */
+
+/* Son verdes por que al final se les asigna un  nuevo color, eliminando ese bloque de codigo volverian a ser rojos 
+  ul.news li.news__item a.news__item-link {
+  color: green;
+}*/
+
+/* Al rehacer los ul y il por div tendria que modificar el nombre de los selectores de las clases en el css  */
+
+.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+a {
+  color: red;
+}
+.news .news__item {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 10px;
+}
+.news .news__item + .news__item {
+  border-top: 1px solid #ccc;
+}
+.news .news__item:nth-child(2n) {
+  background: #eee;
+}
+.news .news__item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.news .news__item h2.news__item-title {
+  margin: 0 0 0.25em;
+  font-size: 20px;
+}
+.news .news__item a.news__item-link {
+  color: green;
+}
+
+/* Se quedaria igual al quitar los selectores de las etiquetas ya que estilamos por nombre clase  */
