@@ -4,16 +4,13 @@
   --white: #eaeaea;
 }
 
-body {
-  margin: 0;
-}
-
 header {
   background-color: var(--white);
   padding: 20px;
 }
 
 main {
+  margin: 0;
   padding: 20px;
 }
 
@@ -24,7 +21,7 @@ p {
 
 ul {
   list-style-type: none;
-  padding: 0;
+  /* padding: 0; */
 }
 
 .title {
@@ -34,7 +31,7 @@ ul {
 
 .subtitle {
   color: var(--grey);
-  margin: 0;
+  /* margin: 0; */
 }
 
 .menu li {
