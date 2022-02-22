@@ -1,0 +1,48 @@
+.title {
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: aquamarine;
+}
+
+.item {
+  padding-top: 25px;
+  background: white;
+  text-align: center;
+  font-size: 36px;
+}
+
+/* flex  */
+/* Flex afecta al contenedor y a los hijos NO A LOS NIETOS  */
+.container {
+  width: 500px;
+  display: flex;
+  /* Direccion de los items en el contenedor */
+  flex-direction: row;
+  /* alinear items  */
+  justify-content: space-around;
+  /* Para salto de linea */
+  flex-wrap: wrap;
+  /* Centramos elementos dentro del contenedor  */
+  align-items: center;
+}
+
+.item {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #666;
+}
+
+.item-1 {
+  flex-grow: 1;
+}
+
+.item-2 {
+  flex-grow: 2;
+}
+
+.item-3 {
+  flex-grow: 6;
+}

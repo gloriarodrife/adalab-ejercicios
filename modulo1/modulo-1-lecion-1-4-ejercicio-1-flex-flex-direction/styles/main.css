@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* .container {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+} */
+
+/* Para distribuirlos verticalmente  */
+.container {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.item {
+  border: 2px solid purple;
+  background-color: bisque;
+  /* width: 20px; */
+}

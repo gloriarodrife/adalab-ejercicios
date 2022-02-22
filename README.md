@@ -11,19 +11,25 @@
 
 # Ejercicios herencia y especificidad
 
-- 2.2.1 Selectores CSSgit
-- 2.3.2 Herencias de CSS
-- 2.3.3 Conociendo la especifidad
+- 1.2.1 Selectores CSSgit
+- 1.3.2 Herencias de CSS
+- 1.3.3 Conociendo la especifidad
 
 # Ejercicio decolores y Background
 
-- 2.4 Trabajamos una imagen con fondos diferentes
+- 1.2.4 Trabajamos una imagen con fondos diferentes
 
 # Ejercicios sobre Modelo de caja y herramientas
 
 - Modelo de caja:
-- 3.1.1 Marcando
-- 3.1.2 Displays
-- 3.1.3 Imagén de párrafo
-- 3.1.4 Imagen enre párrafos
-- 3.1.5 Ajustando imágenes
+- 1.3.1 Marcando
+- 1.3.2 Displays
+- 1.3.3 Imagén de párrafo
+- 1.3.4 Imagen enre párrafos
+- 1.3.5 Ajustando imágenes
+
+# Ejercicios de Flexbox
+
+- 1.4.1 Flex y flex direction
+- 1.4.2 Flex wrap
+- 1.4.3 Justify content y aling items
