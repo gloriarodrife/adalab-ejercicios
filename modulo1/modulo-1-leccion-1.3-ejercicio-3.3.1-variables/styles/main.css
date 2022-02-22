@@ -1,0 +1,51 @@
+:root {
+  --grey: grey;
+  --green: green;
+  --white: #eaeaea;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: var(--white);
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+p {
+  width: 50%;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.title {
+  color: var(--grey);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--grey);
+  margin: 0;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+p a {
+  color: var(--green);
+}
