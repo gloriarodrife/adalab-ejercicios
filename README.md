@@ -37,5 +37,11 @@
 - 1.4.2 Flex wrap
 - 1.4.3 Justify content y aling items
 - 1.4.4 Order
+- 1.4.5 Flex, grow, shrink y basis
+- 1.4.6 Crear página con FlexBox
+- 1.4.7 Otra página con Flexbox
+- 1.4.8 Página completa
 
-#
+# Ejercicios de Posicionamiento
+
+- 1.5.1 Listas horizontales
