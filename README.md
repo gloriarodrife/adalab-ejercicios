@@ -27,6 +27,9 @@
 - 1.3.3 Imagén de párrafo
 - 1.3.4 Imagen enre párrafos
 - 1.3.5 Ajustando imágenes
+- 1.3.6 Crear páginas con flexBox
+- 1.3.7 Otra página con FlexBox
+- 1.3.8 Página completa
 
 # Ejercicios de Flexbox
 

@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+}
+
+.header {
+  background-color: tomato;
+  text-align: center;
+}
+.main {
+  display: flex;
+  text-align: center;
+}
+.main-1 {
+  background-color: yellow;
+  min-width: 200px;
+}
+
+.main-2 {
+  background-color: blue;
+}
+
+.main-3 {
+  background-color: pink;
+  min-width: 200px;
+}
+
+.footer {
+  background-color: green;
+  text-align: center;
+}

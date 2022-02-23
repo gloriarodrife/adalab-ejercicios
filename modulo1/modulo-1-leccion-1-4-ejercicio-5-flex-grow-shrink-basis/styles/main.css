@@ -1,0 +1,26 @@
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: aqua;
+  height: 80px;
+  font-weight: bold;
+}
+
+.main {
+  background-color: bisque;
+  font-weight: bold;
+  min-height: 800px;
+}
+
+.footer {
+  background-color: peru;
+  font-weight: bold;
+
+  height: 50px;
+}
+
+/* Modificando el min-height del main los bloques de codigo varian su tamaño y cubre toda la pagina independientemente del ancho de la página  */
