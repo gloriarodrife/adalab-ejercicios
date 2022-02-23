@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 2px solid purple;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.box-2 {
+  height: 300px;
+  border: 2px solid pink;
+  display: flex;
+  align-items: center;
+}
+
+.div-1 {
+  height: 100px;
+  width: 590px;
+  border: 1px solid green;
+  background-color: bisque;
+  margin: 2px;
+}
