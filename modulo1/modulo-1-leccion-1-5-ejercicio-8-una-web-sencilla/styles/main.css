@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cookies-section-heigth: 40px;
+}
+
+body {
+  /* Así el footer no desaparece con las cookies  */
+  padding-bottom: var(--cookies-section-heigth);
+}
+.footer {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  /* Esta es otra opcion  */
+  /* margin-bottom: 18px; */
+  border: 1px solid green;
+}
+
+.redes_sociales {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.cookies {
+  height: var(--cookies-section-heigth);
+  width: 100%;
+  background-color: antiquewhite;
+  position: fixed;
+  bottom: 0px;
+}

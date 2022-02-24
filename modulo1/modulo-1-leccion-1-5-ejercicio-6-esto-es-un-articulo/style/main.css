@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 8px solid black;
+}
+
+.div {
+  margin-top: 106px;
+  margin-left: 50%;
+  /* se le aplica al width que tiene el elemento  */
+  transform: translate(-50%);
+}
+
+header {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.h1 {
+  font-size: 32px;
+  margin-bottom: 27px;
+}
+
+main p {
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+
+main a {
+  padding: 8px 16px;
+  margin-left: -16px;
+}

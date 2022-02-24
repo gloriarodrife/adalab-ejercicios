@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip .tooltiptext {
+  /* Escondemos el texto  */
+  visibility: hidden;
+  width: 400px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/* Muestra el texto de información sobre herramientas cuando pasas el mouse sobre el contenedor de información sobre herramientas */
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.tooltip1 .tooltiptext1 {
+  /* Escondemos el texto  */
+  visibility: hidden;
+  width: 400px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/* Muestra el texto de información sobre herramientas cuando pasas el mouse sobre el contenedor de información sobre herramientas */
+
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+}
+.tooltip2 .tooltiptext2 {
+  /* Escondemos el texto  */
+  visibility: hidden;
+  width: 400px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/* Muestra el texto de información sobre herramientas cuando pasas el mouse sobre el contenedor de información sobre herramientas */
+
+.tooltip2:hover .tooltiptext2 {
+  visibility: visible;
+}

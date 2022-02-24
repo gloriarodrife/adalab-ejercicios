@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cookies {
+  background-color: yellow;
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  font-size: 30px;
+}
