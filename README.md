@@ -45,3 +45,4 @@
 # Ejercicios de Posicionamiento
 
 - 1.5.1 Listas horizontales
+- 1.5.2 Desplazando divs relativamente
