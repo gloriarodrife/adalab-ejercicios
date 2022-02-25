@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  background: red;
+  height: 100px;
+}
+@media all and (min-width: 550px) {
+  .box {
+    background: blue;
+  }
+}
