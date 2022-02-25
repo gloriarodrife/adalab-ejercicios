@@ -88,7 +88,7 @@ main {
 .modal {
   background: white;
   color: #fff;
-  height: 250px;
+  height: 15.6rem;
   width: 450px;
   transition: all 0.5s;
   display: flex;
@@ -99,14 +99,18 @@ main {
   gap: 20px;
   color: black;
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  transform: translate(50%);
+  /* object-fit: contain; */
 }
 
 .modal_button {
   height: 40px;
   width: 100px;
   border-radius: 5px solid black;
+}
+button:hover {
+  transform: scale(1.2);
 }
 
 .button_modal1 {
