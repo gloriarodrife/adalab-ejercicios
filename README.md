@@ -46,3 +46,21 @@
 
 - 1.5.1 Listas horizontales
 - 1.5.2 Desplazando divs relativamente
+- 1.5.2 Vente conmigo
+- 1.5.1 Mueve las cajas
+- 1.5.2 Cajas sobre cajas
+- 1.5.3 Aviso de cookies
+- 1.5.4 Ese texto necesita aire
+- 1.5.5 Dame PDFs
+- 1.5.2 Esto es un artículo
+- 1.5.2 Tecnologías web
+- 1.5.2 Una web sencilla
+- 1.5.2 Con buenos modales (REVISION CON PROFESORES)
+
+# Ejercicios de Diseño responsivo
+
+- 1.6.2 Redimensiona columnas
+- 1.6.2 Vamos a pensar
+- 1.6.2 Página que cambia de colores
+- 1.6.1 Mi primera web responsive
+- 1.6.2 Implementa una columna central
