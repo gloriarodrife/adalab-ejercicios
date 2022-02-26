@@ -32,7 +32,7 @@ main h2 {
   }
 
   .content {
-    width: 35em;
+    width: 30em;
     position: absolute;
     right: 0;
     top: 60px;
@@ -40,7 +40,7 @@ main h2 {
   .footer {
     position: absolute;
     right: 0;
-    width: 35em;
+    width: 30em;
     top: 18em;
   }
   aside {
