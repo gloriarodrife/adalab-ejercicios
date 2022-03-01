@@ -26,7 +26,7 @@ main h2 {
   background-color: rgb(73, 72, 72);
 }
 
-@media (min-width: 480px) {
+@media all and (min-width: 480px) {
   body {
     background-color: grey;
   }
@@ -69,7 +69,7 @@ main h2 {
   }
 }
 
-@media (min-width: 1000px) {
+@media all and (min-width: 1000px) {
   .content {
     width: 35em;
     position: absolute;
