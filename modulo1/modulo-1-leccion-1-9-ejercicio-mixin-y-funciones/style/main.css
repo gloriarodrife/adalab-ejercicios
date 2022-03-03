@@ -1,8 +1,17 @@
 .item {
-  height: 80px;
+  height: 100px;
   width: 100px;
-  background-color: pink;
+  border: 1px solid black;
   font-size: 18px;
   line-height: 8px;
+}
+
+.item-1 {
+  background-color: red;
+}
+
+.item-2 {
+  color: white;
+  background-color: pink;
 }
 /*# sourceMappingURL=main.css.map */

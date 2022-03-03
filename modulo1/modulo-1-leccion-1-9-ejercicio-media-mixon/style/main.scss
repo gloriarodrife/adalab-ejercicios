@@ -1,0 +1,33 @@
+// @mixin media() {
+//   font-size: rem(1);
+
+//   @media all and (min-whidth: 678px) {
+//     font-size: 18px;
+//   }
+
+//   @media all and (min-whidth: 678px) {
+//     @include desktop();
+//   }
+// }
+
+@mixin tablet() {
+  font-size: 18px;
+}
+@mixin desktop() {
+  font-size: 20px;
+}
+
+@mixin media() {
+  @media all and (min-whidth: 678px) {
+    @include tablet();
+  }
+  @media all and (min-whidth: 1200px) {
+    @include desktop();
+  }
+}
+
+.title {
+  font-size: 16px;
+
+  @include media();
+}
