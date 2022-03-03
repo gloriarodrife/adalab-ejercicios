@@ -1,0 +1,36 @@
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+.card:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border: 2px solid pink;
+}
+
+.card--dark {
+  height: 5px;
+  width: 5px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid purple;
+}
+
+.card--light {
+  height: 5px;
+  width: 5px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid yellow;
+}
+/*# sourceMappingURL=main.css.map */

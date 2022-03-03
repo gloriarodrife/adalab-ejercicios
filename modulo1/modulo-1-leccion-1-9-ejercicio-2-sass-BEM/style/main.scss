@@ -1,0 +1,55 @@
+$size: 100px;
+$size-ten: 10px;
+$size-five: 5px;
+$size-two: 2px;
+
+.card {
+  width: $size;
+  height: $size;
+  margin: $size-ten;
+  border: 2px solid black;
+}
+// .card:hover {
+//   box-shadow: $size-ten $size-ten $size-five 0px rgba(0, 0, 0, 0.75);
+//   border: $size-two solid pink;
+// }
+// .card--dark {
+//   height: $size-five;
+//   width: $size-five;
+//   background-color: #000;
+//   color: #fff;
+//   border: $size-two solid purple;
+// }
+// .card--light {
+//   height: $size-five;
+//   width: $size-five;
+//   background-color: #fff;
+//   color: #000;
+//   border: $size-two solid yellow;
+// }
+
+.card {
+  width: $size;
+  height: $size;
+  margin: $size-ten;
+  border: 2px solid black;
+
+  &:hover {
+    box-shadow: $size-ten $size-ten $size-five 0px rgba(0, 0, 0, 0.75);
+    border: $size-two solid pink;
+  }
+  &--dark {
+    height: $size-five;
+    width: $size-five;
+    background-color: #000;
+    color: #fff;
+    border: $size-two solid purple;
+  }
+  &--light {
+    height: $size-five;
+    width: $size-five;
+    background-color: #fff;
+    color: #000;
+    border: $size-two solid yellow;
+  }
+}
