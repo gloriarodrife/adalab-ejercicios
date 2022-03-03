@@ -1,0 +1,19 @@
+.title {
+  font-size: 16px;
+  color: blue;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 18px;
+    color: red;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 20px;
+    color: yellow;
+  }
+}
+/*# sourceMappingURL=main.css.map */
