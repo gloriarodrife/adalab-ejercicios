@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <form action="" method="get">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        name="name"
+        placeholder="Nombre "
+        required
+      />
+
+      <input
+        type="text"
+        id="apellido"
+        name="APELLIDO"
+        placeholder="Apellido "
+      />
+
+      <label for="usuario">Nombre de usuario</label>
+      <input
+        type="email"
+        id="usuario"
+        name="usuario"
+        placeholder="@email "
+        required
+      />
+      <label for="calle">Contraseña</label>
+      <input
+        type="password"
+        id="contraseña"
+        name="contraseña"
+        value="Madrid"
+        required
+      />
+      <label for="password">Confirma tu contraseña</label>
+      <input type="password" id="password" name="password" required />
+      <label for="">Fecha de nacimiento</label>
+      <input
+        type="number"
+        id="date"
+        name="date"
+        placeholder="Dia"
+        value="España"
+        required
+      />
+      <select name="month" id="month">
+        <option value="enero">Enero</option>
+        <option value="febrero">Febrero</option>
+        <option value="marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="JulioAgosto">JulioAgosto</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+      </select>
+      <input type="number" id="yeaar" name="year" placeholder="Año " required />
+      <label for="contraseña">Sexo</label>
+      <select name="sex" id="sex">
+        <option value="female">female</option>
+        <option value="man">man</option>
+      </select>
+      <label for="mobile">Mobile</label>
+      <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        placeholder="+ 34"
+        pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{3}"
+        required
+      />
+      <label for="email">Tu dirrección de correo actual</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Escribe tu correo "
+        required
+      />
+      <label for="site">Ubicación</label>
+      <select name="site" id="site">
+        <option value="España">España</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Francia">Francia</option>
+        <option value="Rusia">Rusia</option>
+      </select>
+
+      <input type="submit" value="Siguiente paso" />
+    </form>
+  </body>
+</html>
