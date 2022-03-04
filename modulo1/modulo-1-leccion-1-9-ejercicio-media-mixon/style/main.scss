@@ -10,24 +10,40 @@
 //   }
 // }
 
-@mixin tablet() {
-  font-size: 18px;
-}
-@mixin desktop() {
-  font-size: 20px;
-}
-
-@mixin media() {
-  @media all and (min-whidth: 678px) {
-    @include tablet();
+@mixin tablet {
+  // font-size: 18px;
+  @media all and (min-width: 768px) {
+    @content;
   }
-  @media all and (min-whidth: 1200px) {
-    @include desktop();
+}
+@mixin desktop {
+  // font-size: 20px;
+  @media all and (min-width: 1200px) {
+    @content;
   }
 }
 
 .title {
   font-size: 16px;
-
-  @include media();
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 20px;
+  }
 }
+
+// @mixin media() {
+//   @media all and (min-whidth: 678px) {
+//     @include tablet();
+//   }
+//   @media all and (min-whidth: 1200px) {
+//     @include desktop();
+//   }
+// }
+
+// .title {
+//   font-size: 16px;
+
+//   @include media();
+// }
