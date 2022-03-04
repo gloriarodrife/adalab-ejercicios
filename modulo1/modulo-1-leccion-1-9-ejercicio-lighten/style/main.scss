@@ -1,0 +1,31 @@
+@mixin cajas() {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+@mixin rojo() {
+  background-color: lighten(red, 20%);
+}
+
+@mixin fontwhite() {
+  color: white;
+  background-color: pink;
+}
+
+@mixin texto($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.item {
+  @include cajas();
+  @include texto(18px, 8px);
+}
+
+.item-1 {
+  @include rojo();
+}
+
+.item-2 {
+  @include fontwhite();
+}

@@ -1,0 +1,17 @@
+.item {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  font-size: 18px;
+  line-height: 8px;
+}
+
+.item-1 {
+  background-color: #ff6666;
+}
+
+.item-2 {
+  color: white;
+  background-color: pink;
+}
+/*# sourceMappingURL=main.css.map */
