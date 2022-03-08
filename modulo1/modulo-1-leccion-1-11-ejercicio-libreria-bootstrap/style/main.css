@@ -1,0 +1,23 @@
+.header {
+  height: 100px;
+}
+
+.menu {
+  height: 250px;
+}
+
+.footer {
+  height: 100px;
+}
+
+.menu,
+.content,
+.header,
+.footer {
+  color: bisque;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
