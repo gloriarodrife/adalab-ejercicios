@@ -1,0 +1,17 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+.row {
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: aqua;
+  height: 30px;
+}
