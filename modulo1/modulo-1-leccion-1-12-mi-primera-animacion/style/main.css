@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://img.freepik.com/foto-gratis/atardecer-colorido-amarillo-sol-dramatica_1203-5704.jpg?w=900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container_text {
+  font-size: 4.5rem;
+  color: #d6aa74;
+  animation-name: texto;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes texto {
+  from {
+    transform: translate(0px, -550px);
+    opacity: 0;
+  }
+  to {
+    opacity: 3;
+  }
+}
+/*# sourceMappingURL=main.css.map */
