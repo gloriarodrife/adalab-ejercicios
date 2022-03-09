@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+body:hover .popup {
+  transform: translate(0, -350px);
+}
+
+.popup {
+  text-transform: capitalize;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 250px;
+  height: 100px;
+  box-shadow: 5px 5px 5px 5px #e9dfdf;
+  transition: all 2s linear;
+}
+
+.text {
+  color: aqua;
+}
+/*# sourceMappingURL=main.css.map */
