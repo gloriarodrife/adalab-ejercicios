@@ -6,11 +6,12 @@ body {
 }
 
 body:hover .popup {
-  transform: translate(0, -350px);
+  transform: translate(0, -550px);
 }
 
 .popup {
   text-transform: capitalize;
+  transform: translate(0, 100vh);
   border: 1px solid black;
   border-radius: 15px;
   display: grid;

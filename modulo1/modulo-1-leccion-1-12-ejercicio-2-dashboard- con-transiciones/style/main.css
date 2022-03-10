@@ -17,13 +17,13 @@ body {
 }
 
 .box {
-  background: #d0f7f3;
+  background-color: #d0f7f3;
   position: relative;
   padding: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   height: 100%;
   box-sizing: border-box;
-  transition: background ease 5s, box-shadow ease 8s;
+  transition: background-color ease 5s, box-shadow ease 8s;
 }
 
 .box:hover {
