@@ -12,16 +12,16 @@
 
 .container_text {
   font-size: 4.5rem;
-  color: #d6aa74;
   animation-name: texto;
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+  color: #408be0;
 }
 
 @keyframes texto {
   from {
-    transform: translate(0px, -550px);
+    transform: translate(0, -550px);
     opacity: 0;
   }
   to {
