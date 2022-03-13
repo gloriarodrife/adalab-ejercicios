@@ -39,7 +39,7 @@ body {
   background-color: #009588;
 }
 
-.email:hover {
+.email:focus {
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
 }
