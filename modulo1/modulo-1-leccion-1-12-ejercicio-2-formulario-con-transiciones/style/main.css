@@ -1,0 +1,46 @@
+h1 {
+  font-size: 1.5rem;
+  color: #009588;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.button {
+  background-color: #009588;
+}
+
+.email:hover {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+}
+/*# sourceMappingURL=main.css.map */

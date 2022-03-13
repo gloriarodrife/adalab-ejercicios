@@ -1,8 +1,13 @@
 body {
   color: #010101;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font: 18px "Arial, sans-serif;";
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   min-height: 100vh;
 }
@@ -15,12 +20,15 @@ body {
   background: yellow;
   height: 50px;
   padding: 10px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main {
   background: cyan;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main__title {
@@ -37,6 +45,7 @@ body {
   background: yellow;
   height: 50px;
   padding: 10px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+h1 {
+  font-size: 1.5rem;
+  color: #009588;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.button {
+  background-color: #009588;
+}
+
+.email:hover {
+  transform: translateY(25px);
+}
