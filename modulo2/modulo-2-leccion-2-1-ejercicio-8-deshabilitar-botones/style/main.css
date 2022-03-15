@@ -1,0 +1,10 @@
+.button {
+  color: black;
+  background-color: #25f1f1;
+  height: 120px;
+  width: 220px;
+}
+
+.hidden {
+  opacity: 0;
+}
