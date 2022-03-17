@@ -1,66 +1,62 @@
-# mis-ejercicios
-
 # MODULO 1
 
-# Creamos nuestra primera pagina con una receta de un Gazpacho
+**Maquetación:**
 
-# Ejercicio tabla:
+1. Intro a la web
+2. Mi primera página web
+3. Modelo de caja y herramientas
+4. Flexbox
+5. Posicionamiento
+6. Diseño responsive
+7. Control de versiones
+8. Automatización de tareas
+9. SASS
+10. Formularios
+11. Sistema de Grid
+12. Animaciones CSS
 
-- Creamos una tabla
-- Le damos estilo a la tabla con css
+# MODULO 2
 
-# Ejercicios herencia y especificidad
+**JavaScript:**
 
-- 1.2.1 Selectores CSSgit
-- 1.3.2 Herencias de CSS
-- 1.3.3 Conociendo la especifidad
+1. Intro a la programación
+2. Intro a la programación 2
+3. Condicionales
+4. Funciones
+5. Eventos
+6. Objetos
+7. Arrays y bucles
+8. Trabajo colaborativo en Git
+9. Arrays y bucles 2
+10. Peticiones al servidor
+11. Peticiones al servidor 2
+12. DOM avanzado
+13. Métodos funcionales de array
+14. Asincronía y temporizadores
 
-# Ejercicio decolores y Background
+# MODULO 3
 
-- 1.2.4 Trabajamos una imagen con fondos diferentes
+**React:**
 
-# Ejercicios sobre Modelo de caja y herramientas
+1. Mi primera web en React
+2. Eventos y estado
+3. Formularios
+4. Arrays y objetos
+5. Fetch y local storage
+6. Componentes y props
+7. Lifting y children
+8. Router
+9. Buenas prácticas
+10. Testing
 
-- Modelo de caja:
-- 1.3.1 Marcando
-- 1.3.2 Displays
-- 1.3.3 Imagén de párrafo
-- 1.3.4 Imagen enre párrafos
-- 1.3.5 Ajustando imágenes
-- 1.3.6 Crear páginas con flexBox
-- 1.3.7 Otra página con FlexBox
-- 1.3.8 Página completa
+# MODULO 4
 
-# Ejercicios de Flexbox
+**Node JS, Express JS y SQL:**
 
-- 1.4.1 Flex y flex direction
-- 1.4.2 Flex wrap
-- 1.4.3 Justify content y aling items
-- 1.4.4 Order
-- 1.4.5 Flex, grow, shrink y basis
-- 1.4.6 Crear página con FlexBox
-- 1.4.7 Otra página con Flexbox
-- 1.4.8 Página completa
-
-# Ejercicios de Posicionamiento
-
-- 1.5.1 Listas horizontales
-- 1.5.2 Desplazando divs relativamente
-- 1.5.2 Vente conmigo
-- 1.5.1 Mueve las cajas
-- 1.5.2 Cajas sobre cajas
-- 1.5.3 Aviso de cookies
-- 1.5.4 Ese texto necesita aire
-- 1.5.5 Dame PDFs
-- 1.5.2 Esto es un artículo
-- 1.5.2 Tecnologías web
-- 1.5.2 Una web sencilla
-- 1.5.2 Con buenos modales (REVISION CON PROFESORES)
-
-# Ejercicios de Diseño responsivo
-
-- 1.6.2 Redimensiona columnas
-- 1.6.2 Vamos a pensar
-- 1.6.2 Página que cambia de colores
-- 1.6.1 Mi primera web responsive
-- 1.6.2 Implementa una columna central
+1. Node JS
+2. Express JS I
+3. Express JS II
+4. Express JS III
+5. Bases de datos I
+6. Bases de datos II
+7. Bases de datos III
