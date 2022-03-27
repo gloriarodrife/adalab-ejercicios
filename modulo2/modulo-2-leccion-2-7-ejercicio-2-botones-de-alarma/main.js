@@ -3,9 +3,10 @@
 'use strict';
 
 const buttons = document.querySelectorAll('.js-button');
+const body = document.querySelector('.js-body');
 
 for (const button of buttons) {
   button.addEventListener('click', () => {
-    button.classList.toggle('color');
+    body.classList.toggle('color');
   });
 }

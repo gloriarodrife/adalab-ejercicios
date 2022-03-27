@@ -1,3 +1,11 @@
 .color {
   background-color: red;
 }
+
+.structure {
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
