@@ -4,7 +4,7 @@ const input = document.querySelector('.js-input');
 const input2 = document.querySelector('.js-input2');
 const button = document.querySelector('.js-button');
 
-// Guardar el valor del input en un objeto
+// Guardar el valor del input en un array
 
 function getMovies() {
   const movieList = [];
@@ -19,7 +19,7 @@ button.addEventListener('click', handle);
 
 function handle(event) {
   event.preventDefault();
-  // Guerado lista de peliculas
+  // Guarado lista de peliculas
   const movieList = getMovies();
   console.log(movieList);
   for (const movie of movieList) {
