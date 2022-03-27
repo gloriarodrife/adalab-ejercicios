@@ -19,7 +19,7 @@ function iterator(array) {
     if (Array.isArray(item)) {
       type = 'Array';
     }
-    // Si es tipo object lo conbertimos en un string con el metodo JSON.stringify
+    // Si es tipo object lo convertimos en un string con el metodo JSON.stringify
     if (type === 'object') {
       item = JSON.stringify(item);
     }
