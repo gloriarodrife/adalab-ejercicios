@@ -6,21 +6,10 @@ const body = document.querySelector('.js-body');
 const face = document.querySelector('.js-face');
 
 // Generar un número aleatorio
-
 function GenerateRandomNumb(max) {
   let randomNumb = parseInt(Math.random() * max);
   return randomNumb;
 }
-
-// Función manejadora
-// Evitamos el evento de recargar la página del botón
-function handleClickBtn(event) {
-  event.preventDefault();
-  changeBackground();
-  updateFace();
-}
-
-update.addEventListener('click', handleClickBtn);
 
 // Función cambiar el valor de la cara
 function updateFace() {
@@ -40,5 +29,14 @@ function changeBackground() {
     body.classList.add('color');
     body.classList.remove('body');
   }
-  console.log(numAle);
 }
+
+// Función manejadora
+// Evitamos el evento de recargar la página del botón
+function handleClickBtn(event) {
+  event.preventDefault();
+  changeBackground();
+  updateFace();
+}
+
+update.addEventListener('click', handleClickBtn);
