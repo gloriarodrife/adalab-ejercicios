@@ -1,12 +1,11 @@
 'use strict';
 
-function get100Numbers(numbers) {
-  let array = [];
-  for (let index = 0; index < numbers; index++) {
-    const element = index;
-    array.push(element);
-    console.log(array);
+function get100Numbers(arrlength) {
+  const array = [];
+  // const arrlength = 101;
+  for (let index = 1; index < arrlength; index++) {
+    array.push(index);
   }
+  return array;
 }
-
-get100Numbers(100);
+console.log(get100Numbers(100));
