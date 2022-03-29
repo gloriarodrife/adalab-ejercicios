@@ -22,5 +22,10 @@ function multipleOfThree() {
   });
   return array;
 }
+const two = bestLostNomber();
+const three = multipleOfThree();
 
-console.log(multipleOfThree());
+const concatenacion = [];
+
+const result = concatenacion.concat(two, three);
+console.log(result);
