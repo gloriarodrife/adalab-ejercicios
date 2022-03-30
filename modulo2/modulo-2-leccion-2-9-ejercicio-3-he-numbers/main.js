@@ -24,7 +24,7 @@ function multipleOfThree() {
 }
 const two = bestLostNomber();
 const three = multipleOfThree();
-
+console.log(three);
 const concatenacion = [];
 
 const result = concatenacion.concat(two, three);
