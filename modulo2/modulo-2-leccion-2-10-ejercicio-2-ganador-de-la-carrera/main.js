@@ -19,7 +19,7 @@ const posicion = runners.filter((runer) => {
   }
 });
 
-// Preguntar
+// Preguntar por que no me sale el contador
 
 const runners2 = [
   { name: 'Gregory Goyle', time: 56, student: true },
