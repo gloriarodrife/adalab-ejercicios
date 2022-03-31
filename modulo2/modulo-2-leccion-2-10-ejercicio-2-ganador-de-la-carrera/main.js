@@ -19,25 +19,20 @@ const posicion = runners.filter((runer) => {
   }
 });
 
-const users = [
-  { name: 'María', isPremium: false, pin: 2389 },
-  { name: 'Lucía', isPremium: true, pin: 2384 },
-  { name: 'Susana', isPremium: true, pin: 2837 },
-  { name: 'Rocío', isPremium: false, pin: 5232 },
-  { name: 'Inmaculada', isPremium: false, pin: 8998 },
-];
+// Preguntar
 
-const account = users.reduce((acc, user) => {
-  if (user.isPremium === true && user.pin % 2 === 0) {
-    acc++;
+const runners2 = [
+  { name: 'Gregory Goyle', time: 56, student: true },
+  { name: 'Nymphadora Tonks', time: 9, student: false },
+  { name: 'Luna Lovegood', time: 45, student: true },
+  { name: 'Cedric Diggory', time: 28, student: true },
+  { name: 'Cho Chang', time: 35, student: true },
+];
+const account = runners2.reduce((acc, item) => {
+  if (item.student === true && item.time === raceWinner) {
+    console.log(`Ganador ${item.name}`);
+    acc + 1;
   }
-  return acc;
-}, 0);
+});
 
 console.log(account);
-
-// const pairNumber = users.filter((user) => {
-//   if (user.pin % 2 === 0) {
-//     console.log(user.name);
-//   }
-// });
