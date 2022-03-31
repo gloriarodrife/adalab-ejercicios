@@ -10,7 +10,7 @@ const runners = [
 const timeRuner = runners.map((runer) => runer.time);
 console.log(timeRuner);
 
-const raceWinner = timeRuner.reduce((acc, number) => Math.max(acc, number));
+const raceWinner = timeRuner.reduce((acc, number) => Math.min(acc, number));
 console.log(raceWinner);
 
 const posicion = runners.filter((runer) => {
@@ -19,8 +19,6 @@ const posicion = runners.filter((runer) => {
   }
 });
 
-// Preguntar por que no me sale el contador
-
 const runners2 = [
   { name: 'Gregory Goyle', time: 56, student: true },
   { name: 'Nymphadora Tonks', time: 9, student: false },
@@ -28,11 +26,12 @@ const runners2 = [
   { name: 'Cedric Diggory', time: 28, student: true },
   { name: 'Cho Chang', time: 35, student: true },
 ];
-const account = runners2.reduce((acc, item) => {
-  if (item.student === true && item.time === raceWinner) {
-    console.log(`Ganador ${item.name}`);
-    acc + 1;
+const account = runners2.reduce((acc, runner) => {
+  if (runner.student && runner.time < acc.time) {
+    return runner;
   }
+
+  return acc;
 });
 
-console.log(account);
+console.log(`The winner is ${account.name} with ${account.time}`);
