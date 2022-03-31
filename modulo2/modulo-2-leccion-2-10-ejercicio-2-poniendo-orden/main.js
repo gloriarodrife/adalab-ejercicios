@@ -11,9 +11,9 @@ const users = [
 const numberPin = users.sort((a, b) => {
   return a.pin - b.pin;
 });
-
 console.log(numberPin);
 
+// Orden de nombres
 const nameOrder = users.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
@@ -21,7 +21,6 @@ const nameOrder = users.sort((a, b) => {
   if (a.name < b.name) {
     return -1;
   }
-  // a must be equal to b
   return 0;
 });
 
