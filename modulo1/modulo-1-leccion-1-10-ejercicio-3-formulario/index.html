@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
-    <form action="" method="get">
+    <form action="" method="get" class="js_form">
       <label for="nombre">Nombre</label>
       <input
         type="text"
@@ -21,29 +21,41 @@
       <input
         type="text"
         id="apellido"
-        name="APELLIDO"
+        name="apellido"
         placeholder="Apellido "
       />
 
       <label for="usuario">Nombre de usuario</label>
       <input
-        type="email"
+        type="text"
         id="usuario"
         name="usuario"
-        placeholder="@email "
+        autocomplete="username"
         required
       />
       <label for="password1">Contraseña</label>
-      <input type="password" id="password1" name="contraseña" required />
+      <input
+        type="password"
+        id="password1"
+        name="contraseña"
+        autocomplete="new-password"
+        required
+      />
       <label for="password">Confirma tu contraseña</label>
-      <input type="password" id="password" name="password" required />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="new-password"
+        required
+      />
       <label for="">Fecha de nacimiento</label>
       <input
         type="number"
         id="date"
         name="date"
         placeholder="Dia"
-        value="España"
+        value="10"
         required
       />
       <select name="month" id="month">
@@ -67,15 +79,7 @@
         <option value="man">man</option>
       </select>
       <label for="mobile">Mobile</label>
-      <input
-        type="tel"
-        id="mobile"
-        name="mobile"
-        placeholder="+ 34"
-        pattern="/^\+?(\d.*){3,}$/
-        "
-        required
-      />
+      <input type="tel" id="mobile" name="mobile" placeholder="+ 34" required />
       <label for="email">Tu dirrección de correo actual</label>
       <input
         type="email"
@@ -93,6 +97,7 @@
       </select>
 
       <input type="submit" value="Siguiente paso" />
+      <script src="./main.js"></script>
     </form>
   </body>
 </html>
