@@ -18,17 +18,28 @@ function searchPeople(search) {
 
       for (const person of characters) {
         listCharanders.innerHTML += `<li> ${person.name} con genero ${person.gender}`;
-        // localStorage.setItem('name', person.name);
-        // localStorage.setItem('gender', person.gender);
       }
       return data;
     });
 }
 
 function getSearchValue() {
-  const characters = input.value;
+  const query = input.value;
   listCharanders.innerHTML = '';
-  searchPeople(characters);
+
+  // Guardar valores de la busqueda que he hecho
+  // Buscar en el local Storage el item por la key
+  // Si la busqueda es null hago la llamada al servidor
+  // Pinto con el dato del localStorage
+  const cache = localStorage.getItem(query);
+  if (cache === null) {
+    searchPeople(query);
+  } else {
+    const characters = JSON.parse(cache);
+    for (const person of characters) {
+      listCharanders.innerHTML += `<li> ${person.name} con genero ${person.gender}`;
+    }
+  }
 }
 
 button.addEventListener('click', getSearchValue);
