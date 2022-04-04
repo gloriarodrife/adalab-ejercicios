@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 20px 10px;
+}
+ul {
+  list-style: none;
+  margin: auto 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: bold;
+}
