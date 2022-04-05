@@ -13,8 +13,6 @@ const heigth3 = p3.offsetHeight;
 
 text.innerHTML = `El alto del primer parafo es ${heigth1}, del segundo es ${heigth2} y del tercero es ${heigth3}`;
 
-console.log(heigth1 / 3);
-
 button.addEventListener('click', () => {
   p1.setAttribute('style', `height: ${heigth1 / 3}px`);
   p2.setAttribute('style', `height: ${heigth2 / 3}px`);
