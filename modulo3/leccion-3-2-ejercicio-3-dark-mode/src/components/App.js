@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function App() {
   // hook
-  const [mode, setMode] = useState('');
+  const [mode, setMode] = useState('ligth');
 
   const handleMode = (ev) => {
     const current = ev.currentTarget.parentNode;
@@ -11,23 +11,24 @@ function App() {
     if (mode === 'dark') {
       setMode('ligth');
       current.classList.remove('dark');
-      current.classList.add('ligth');
     } else {
       setMode('dark');
       current.classList.add('dark');
     }
   };
 
+  const renderDarkModeText = () => {
+    if (mode === 'dark') {
+      return <p>Tienes activado el {mode}</p>;
+    } else {
+      return null;
+    }
+  };
+
   return (
     <div className="App">
       <button onClick={handleMode}>Des / Activar dark</button>
-
-      <p>Tienes activado el {mode}</p>
-      {/* <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero sequi
-        ex omnis impedit illum iusto necessitatibus laborum rerum fugit nostrum,
-        pariatur, inventore, assumenda eum id! Veniam dignissimos odio rem quam!
-      </p> */}
+      {renderDarkModeText()}
     </div>
   );
 }
