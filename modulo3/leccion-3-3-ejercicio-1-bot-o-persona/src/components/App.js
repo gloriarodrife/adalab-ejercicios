@@ -13,6 +13,9 @@ function App() {
 
   const handleCheckbox = (event) => {
     const id = event.currentTarget.id;
+
+    console.log(id);
+
     if (id === 'macarrones') {
       setMacarrones(event.currentTarget.checked);
     } else if (id === 'patatas') {
@@ -41,54 +44,84 @@ function App() {
     }
     return message;
   };
-
+  const handleCheckButton = (event) => {
+    event.preventDefault();
+    setMacarrones(true);
+    setPatatas(true);
+    setNueces(true);
+    setHuevos(true);
+    setCebolla(true);
+    setCerveza(true);
+  };
+  const handleResetButton = (event) => {
+    event.preventDefault();
+    setMacarrones(false);
+    setPatatas(false);
+    setNueces(false);
+    setHuevos(false);
+    setCebolla(false);
+    setCerveza(false);
+  };
   return (
     <div className="App">
       {getTitle('Eres un bot o una persona')}
+
       <h2>Selecciona los ingredientes de la tortilla de patatas</h2>
-      <input
-        type="checkbox"
-        name="macarrones"
-        id="macarrones"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="macarrones">Macarrones</label>
-      <input
-        type="checkbox"
-        name="patatas"
-        id="patatas"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="patatas">Patatas</label>
-      <input
-        type="checkbox"
-        name="nueces"
-        id="nueces"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="nueces">Nueces</label>
-      <input
-        type="checkbox"
-        name="huevos"
-        id="huevos"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="huevos">Huevos</label>
-      <input
-        type="checkbox"
-        name="cebolla"
-        id="cebolla"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="cebolla">Cebolla</label>
-      <input
-        type="checkbox"
-        name="cerveza"
-        id="cerveza"
-        onChange={handleCheckbox}
-      />
-      <label htmlFor="cerveza">Cerveza</label>
+
+      <form name="form" id="form">
+        <input
+          type="checkbox"
+          name="macarrones"
+          id="macarrones"
+          checked={macarrones}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="macarrones">Macarrones</label>
+        <input
+          type="checkbox"
+          name="patatas"
+          id="patatas"
+          checked={patatas}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="patatas">Patatas</label>
+        <input
+          type="checkbox"
+          name="nueces"
+          id="nueces"
+          checked={nueces}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="nueces">Nueces</label>
+        <input
+          type="checkbox"
+          name="huevos"
+          id="huevos"
+          checked={huevos}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="huevos">Huevos</label>
+        <input
+          type="checkbox"
+          name="cebolla"
+          id="cebolla"
+          checked={cebolla}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="cebolla">Cebolla</label>
+        <input
+          type="checkbox"
+          name="cerveza"
+          id="cerveza"
+          checked={cerveza}
+          onChange={handleCheckbox}
+        />
+        <label htmlFor="cerveza">Cerveza</label>
+      </form>
+
       <p>{getMessage()}</p>
+      <button onClick={handleCheckButton}>Marcar</button>
+      <button onClick={handleResetButton}>Desmarcar</button>
     </div>
   );
 }
