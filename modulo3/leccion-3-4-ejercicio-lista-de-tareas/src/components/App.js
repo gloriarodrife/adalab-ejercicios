@@ -3,34 +3,17 @@ import '../styles/App.css';
 
 function App() {
   const [searchTask, setSearchTask] = useState('');
-  const [newTask, setNew] = useState('');
   const [tasks, setTasks] = useState([
-    { task: 'Comprar harina, jamón y pan rallado', completed: true },
-    { task: 'Hacer croquetas ricas', completed: true },
-    { task: 'Ir a la puerta de un gimnasio', completed: false },
+    { id: '123', task: 'Comprar harina, jamón y pan rallado', completed: true },
+    { id: '124', task: 'Hacer croquetas ricas', completed: true },
+    { id: '125', task: 'Ir a la puerta de un gimnasio', completed: false },
     {
+      id: '127',
       task: 'Comerme las croquetas mirando a la gente que entra en el gimnasio',
       completed: false,
     },
   ]);
 
-  const handleNewTask = (ev) => {
-    setNew(ev.currentTarget.value);
-  };
-
-  const handleNew = (e) => {
-    e.preventDefault();
-
-    const tasksNew = {
-      task: newTask,
-      completed: false,
-      id: '',
-    };
-
-    const nuevoArray = [...tasks, tasksNew];
-
-    setTasks(nuevoArray);
-  };
   const renderTasksCmpleted = () => {
     return (
       <div>
@@ -66,8 +49,8 @@ function App() {
       )
       .map((task, index) => (
         <li
-          id={index}
-          key={index}
+          id={task.id}
+          key={task.id}
           className={task.completed ? 'crossOut' : ''}
           onClick={hadleComplete}
         >
@@ -81,8 +64,6 @@ function App() {
       <input type="text" onChange={handleInput} value={searchTask} />
       <ul>{renderTasks()}</ul>
       {renderTasksCmpleted()}
-      <input type="text" onChange={handleNewTask} />
-      <button onClick={handleNew}>+</button>
     </div>
   );
 }
