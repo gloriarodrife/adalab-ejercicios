@@ -3,34 +3,34 @@ import '../styles/App.css';
 
 function App() {
   const [searchTask, setSearchTask] = useState('');
-  // const [newTask, setNew] = useState('');
+  const [newTask, setNew] = useState('');
   const [tasks, setTasks] = useState([
-    { id: '123', task: 'Comprar harina, jamón y pan rallado', completed: true },
-    { id: '456', task: 'Hacer croquetas ricas', completed: true },
-    { id: '789', task: 'Ir a la puerta de un gimnasio', completed: false },
+    { task: 'Comprar harina, jamón y pan rallado', completed: true },
+    { task: 'Hacer croquetas ricas', completed: true },
+    { task: 'Ir a la puerta de un gimnasio', completed: false },
     {
-      id: '321',
       task: 'Comerme las croquetas mirando a la gente que entra en el gimnasio',
       completed: false,
     },
   ]);
 
-  // const handleNewTask = (ev) => {
-  //   setNew(ev.currentTarget.value);
-  // };
+  const handleNewTask = (ev) => {
+    setNew(ev.currentTarget.value);
+  };
 
-  // const handleNew = (e) => {
-  //   e.preventDefault();
-  //   const tasksNew = {
-  //     task: newTask,
-  //     completed: false,
-  //     id: '223',
-  //   };
+  const handleNew = (e) => {
+    e.preventDefault();
 
-  //   const nuevoArray = [...tasks, tasksNew];
+    const tasksNew = {
+      task: newTask,
+      completed: false,
+      id: '',
+    };
 
-  //   setTasks(nuevoArray);
-  // };
+    const nuevoArray = [...tasks, tasksNew];
+
+    setTasks(nuevoArray);
+  };
   const renderTasksCmpleted = () => {
     return (
       <div>
@@ -64,10 +64,10 @@ function App() {
       .filter((task) =>
         task.task.toLowerCase().includes(searchTask.toLowerCase())
       )
-      .map((task) => (
+      .map((task, index) => (
         <li
-          id={task.id}
-          key={task.id}
+          id={index}
+          key={index}
           className={task.completed ? 'crossOut' : ''}
           onClick={hadleComplete}
         >
@@ -81,8 +81,8 @@ function App() {
       <input type="text" onChange={handleInput} value={searchTask} />
       <ul>{renderTasks()}</ul>
       {renderTasksCmpleted()}
-      {/* <input type="text" onChange={handleNewTask} />
-      <button onClick={handleNew}>+</button> */}
+      <input type="text" onChange={handleNewTask} />
+      <button onClick={handleNew}>+</button>
     </div>
   );
 }
