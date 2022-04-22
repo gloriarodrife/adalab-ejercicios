@@ -3,6 +3,7 @@ import '../styles/App.css';
 
 function App() {
   const [searchTask, setSearchTask] = useState('');
+  // const [newTask, setNew] = useState('');
   const [tasks, setTasks] = useState([
     { id: '123', task: 'Comprar harina, jamón y pan rallado', completed: true },
     { id: '456', task: 'Hacer croquetas ricas', completed: true },
@@ -13,6 +14,23 @@ function App() {
       completed: false,
     },
   ]);
+
+  // const handleNewTask = (ev) => {
+  //   setNew(ev.currentTarget.value);
+  // };
+
+  // const handleNew = (e) => {
+  //   e.preventDefault();
+  //   const tasksNew = {
+  //     task: newTask,
+  //     completed: false,
+  //     id: '223',
+  //   };
+
+  //   const nuevoArray = [...tasks, tasksNew];
+
+  //   setTasks(nuevoArray);
+  // };
   const renderTasksCmpleted = () => {
     return (
       <div>
@@ -63,6 +81,8 @@ function App() {
       <input type="text" onChange={handleInput} value={searchTask} />
       <ul>{renderTasks()}</ul>
       {renderTasksCmpleted()}
+      {/* <input type="text" onChange={handleNewTask} />
+      <button onClick={handleNew}>+</button> */}
     </div>
   );
 }
