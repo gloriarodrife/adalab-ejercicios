@@ -51,10 +51,9 @@ function App() {
         task.task.toLowerCase().includes(searchTask.toLowerCase())
       )
       .map((task) => {
-        if (!task.completed) {
+        let taskDone = '';
+        if (task.completed) {
           taskDone = 'crossOut';
-        } else {
-          taskDone = '';
         }
         return (
           <li
