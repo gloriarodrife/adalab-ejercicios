@@ -29,12 +29,10 @@ function App() {
 
   const hadleComplete = (ev) => {
     const taskId = ev.currentTarget.id;
-    console.log(taskId);
 
     const task = tasks.find((task) => task.id === taskId);
 
     task.completed = !task.completed;
-    console.log(task);
 
     setTasks([...tasks]);
   };
@@ -44,28 +42,20 @@ function App() {
   };
 
   const renderTasks = () => {
-    let taskDone = '';
-
     return tasks
       .filter((task) =>
         task.task.toLowerCase().includes(searchTask.toLowerCase())
       )
-      .map((task) => {
-        let taskDone = '';
-        if (task.completed) {
-          taskDone = 'crossOut';
-        }
-        return (
-          <li
-            id={task.id}
-            key={task.id}
-            className={taskDone}
-            onClick={hadleComplete}
-          >
-            {task.task}
-          </li>
-        );
-      });
+      .map((task) => (
+        <li
+          id={task.id}
+          key={task.id}
+          className={task.completed ? 'crossOut' : ''}
+          onClick={hadleComplete}
+        >
+          {task.task}
+        </li>
+      ));
   };
   return (
     <div className="App">
