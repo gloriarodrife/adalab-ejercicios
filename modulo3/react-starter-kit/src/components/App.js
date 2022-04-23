@@ -1,5 +1,6 @@
 import '../styles/App.css';
-
+import { useEffect, useState } from 'react';
+import callToApi from '../services/api'; //
 function App() {
   return (
     <div className="App">

@@ -1,0 +1,20 @@
+// Fichero src/services/api.js
+const callToApi = () => {
+  // Llamamos a la API
+  const URL_API = 'https://swapi.dev/api/people/5';
+  return fetch(URL_API) // Este 5 es el id de Leia Skywalker
+    .then((response) => response.json())
+    .then((response) => {
+      // Cuando responde la API podemos limpiar los datos aquí
+      const result = {
+        name: response.name,
+        birthYear: response.birth_year,
+        height: response.height,
+        mass: response.mass,
+        eyeColor: response.eye_color,
+      };
+      return result;
+    });
+};
+
+export default callToApi;
