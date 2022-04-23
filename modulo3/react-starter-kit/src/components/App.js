@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import { useEffect, useState } from 'react';
-import callToApi from '../services/api'; //
+import { callToApi } from '../services/api';
 function App() {
   return (
     <div className="App">
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export { App };
