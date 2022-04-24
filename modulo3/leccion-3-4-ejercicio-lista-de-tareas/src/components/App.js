@@ -1,19 +1,39 @@
 import { useState } from 'react';
 import '../styles/App.css';
+import ls from '../services/localStorage';
 
 function App() {
   const [searchTask, setSearchTask] = useState('');
-  const [tasks, setTasks] = useState([
-    { id: '123', task: 'Comprar harina, jamón y pan rallado', completed: true },
-    { id: '124', task: 'Hacer croquetas ricas', completed: true },
-    { id: '125', task: 'Ir a la puerta de un gimnasio', completed: false },
+
+  const defaultTasks = [
+    { task: 'Comprar harina, jamón y pan rallado', completed: true },
+    { task: 'Hacer croquetas ricas', completed: true },
+    { task: 'Ir a la puerta de un gimnasio', completed: false },
     {
-      id: '127',
       task: 'Comerme las croquetas mirando a la gente que entra en el gimnasio',
       completed: false,
     },
-  ]);
+  ];
+  const tasksCache = ls.get('task', defaultTasks);
+  const [tasks, setTasks] = useState(tasksCache);
 
+  const [newTask, setNew] = useState('');
+  const handleNewTask = (ev) => {
+    setNew(ev.currentTarget.value);
+  };
+
+  const handleNew = (e) => {
+    e.preventDefault();
+    const tasksNew = {
+      task: newTask,
+      completed: false,
+    };
+
+    const nuevoArray = [...tasks, tasksNew];
+
+    setTasks(nuevoArray);
+    ls.set('task', nuevoArray);
+  };
   const renderTasksCmpleted = () => {
     return (
       <div>
@@ -31,7 +51,7 @@ function App() {
   const hadleComplete = (ev) => {
     const taskId = ev.currentTarget.id;
 
-    const task = tasks.find((task) => task.id === taskId);
+    const task = tasks[taskId];
 
     task.completed = !task.completed;
 
@@ -41,6 +61,11 @@ function App() {
   const handleInput = (ev) => {
     setSearchTask(ev.target.value);
   };
+  const handelReset = (e) => {
+    const buttonId = e.target.id;
+    tasks.splice(buttonId, 1);
+    ls.set('task', tasks);
+  };
 
   const renderTasks = () => {
     return tasks
@@ -49,12 +74,15 @@ function App() {
       )
       .map((task, index) => (
         <li
-          id={task.id}
-          key={task.id}
+          id={index}
+          key={index}
           className={task.completed ? 'crossOut' : ''}
           onClick={hadleComplete}
         >
           {task.task}
+          <button id={index} onClick={handelReset}>
+            X
+          </button>
         </li>
       ));
   };
@@ -64,6 +92,8 @@ function App() {
       <input type="text" onChange={handleInput} value={searchTask} />
       <ul>{renderTasks()}</ul>
       {renderTasksCmpleted()}
+      <input type="text" onChange={handleNewTask} />
+      <button onClick={handleNew}>+</button>
     </div>
   );
 }
