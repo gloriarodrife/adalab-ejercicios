@@ -1,11 +1,17 @@
 import '../styles/App.css';
-import { useEffect, useState } from 'react';
-import { callToApi } from '../services/api';
-import ls from '../services/localStorage';
+
+import { Header } from './header';
+import { Main } from './main';
+
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo</h1>
+      <header className="header">
+        <Header />
+      </header>
+      <main className="main">
+        <Main />
+      </main>
     </div>
   );
 }

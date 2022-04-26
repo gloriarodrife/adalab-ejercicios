@@ -1,0 +1,4 @@
+@import '../styles/reset.css';
+@import '../styles/utils/_variables.scss';
+@import '../styles/components/_Header.scss';
+@import '../styles/components/_Main.scss';
