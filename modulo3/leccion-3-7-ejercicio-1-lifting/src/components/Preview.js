@@ -8,6 +8,7 @@ const Preview = (props) => {
       return 'Contra reembolso';
     }
   };
+
   return (
     <div className="preview">
       <h2>Tus datos son:</h2>
