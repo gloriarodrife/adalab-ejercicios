@@ -123,6 +123,7 @@ const Form = (props) => {
 
         {payments.map((payment) => (
           <InputGroupRadio
+            key={payment.id}
             labelText={payment.labelText}
             name={payment.name}
             id={payment.id}
