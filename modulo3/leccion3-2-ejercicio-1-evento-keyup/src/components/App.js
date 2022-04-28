@@ -22,3 +22,21 @@ function App() {
 }
 
 export default App;
+
+// SPREAD: LISTADOS, OBJETOS
+
+// OBJETOS:
+
+// { CLAVE1: VALOR, CLAVE2: VALOR2, CLAVE3:VALOR3}
+
+// OBJETO.CLAVE1 = "GKJHKJHKJ";
+// VARIABLE = CLAVE2,
+// [VARIABLE]: "DAFHDSFQDKFJ";
+
+// hajaja
+
+// dafhjhail
+
+// ahlkafh
+
+// [...hajaja, ...dafhjhail]

@@ -1,21 +1,24 @@
 const callToApi = async (search) => {
   const URL_API = `https://api.tvmaze.com`;
+  try {
+    // Llamamos a la API
+    const response = await fetch(`${URL_API}/search/shows?q=${search}`);
+    const data = await response.json();
 
-  // Llamamos a la API
-  const response = await fetch(`${URL_API}/search/shows?q=${search}`);
-  const data = await response.json();
+    // Cuando responde la API podemos limpiar los datos aquí
+    const result = data.map((item) => {
+      const show = item.show;
 
-  // Cuando responde la API podemos limpiar los datos aquí
-  const result = data.map((item) => {
-    const show = item.show;
+      return {
+        name: show.name,
+        id: show.id,
+      };
+    });
 
-    return {
-      name: show.name,
-      id: show.id,
-    };
-  });
-
-  return result;
+    return result;
+  } catch (error) {
+    console.log('Error');
+  }
 };
 
 export { callToApi };
