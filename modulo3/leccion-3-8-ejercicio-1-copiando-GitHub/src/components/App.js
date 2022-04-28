@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
 import Header from './Header';
+import Product from './Product';
 import Overview from './Overview';
 import Repositories from './Repositories';
 import NotFoundPage from './NotFoundPage';
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/overview" element={<Overview />} />
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/repositories" element={<Repositories />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
