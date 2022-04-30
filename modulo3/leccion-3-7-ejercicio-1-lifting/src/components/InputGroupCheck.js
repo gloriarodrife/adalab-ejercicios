@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const InputGroupCheck = (props) => {
   const handleInputChange = (ev) => {
     props.handleChange(ev.target.checked);
@@ -19,5 +20,8 @@ const InputGroupCheck = (props) => {
     </div>
   );
 };
-
+InputGroupCheck.prototype = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 export default InputGroupCheck;
