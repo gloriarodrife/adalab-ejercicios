@@ -1,6 +1,5 @@
 const Li = (props) => {
   console.log(props.openInNewTab);
-
   return (
     <li>
       <a
@@ -13,6 +12,10 @@ const Li = (props) => {
       </a>
     </li>
   );
+};
+
+Li.defaultProps = {
+  openInNewTab: 'false',
 };
 
 export { Li };

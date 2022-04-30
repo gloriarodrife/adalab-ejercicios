@@ -18,7 +18,7 @@ const Header = () => {
         <Li
           text="CONTACTO"
           href="https://adalab.es/contacto"
-          openInNewTab={true ? '' : '_blank'}
+          // openInNewTab={true ? '' : '_blank'}
         />
       </ul>
     </div>
