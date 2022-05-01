@@ -1,20 +1,27 @@
-const InputGroupRadio = (props) => {
+const InputGroupRadio = ({
+  name,
+  labelText,
+  id,
+  value,
+  checked,
+  handleChange,
+}) => {
   const handleInputChange = (ev) => {
-    props.handleChange(ev.target.value);
+    handleChange(ev.target.value);
   };
 
   return (
     <div className="input-group-radio">
-      <label className="label-radio" htmlFor={props.name}>
-        {props.labelText}
+      <label className="label-radio" htmlFor={name}>
+        {labelText}
       </label>
 
       <input
         type="radio"
-        name={props.name}
-        id={props.id}
-        value={props.value}
-        checked={props.checked}
+        name={name}
+        id={id}
+        value={value}
+        checked={checked}
         onChange={handleInputChange}
       />
     </div>
