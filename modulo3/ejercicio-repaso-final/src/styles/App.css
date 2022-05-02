@@ -1,0 +1,14 @@
+form {
+  font-size: 2rem;
+}
+
+select {
+  font-size: 1.8rem;
+}
+
+.hidden {
+  display: none;
+}
+ul {
+  list-style: none;
+}
