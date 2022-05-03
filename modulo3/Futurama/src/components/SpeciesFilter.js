@@ -15,8 +15,10 @@ const SpeciesFilter = (props) => {
   };
   return (
     <select name="specie" onChange={handleSpecie}>
-      {species.map((specie) => (
-        <option value={specie}>{specie}</option>
+      {species.map((specie, index) => (
+        <option key={index} value={specie}>
+          {specie}
+        </option>
       ))}
     </select>
   );
