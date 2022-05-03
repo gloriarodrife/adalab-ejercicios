@@ -14,13 +14,18 @@ const SpeciesFilter = (props) => {
     props.handleSpecieSelect(event.target.value);
   };
   return (
-    <select name="specie" onChange={handleSpecie}>
-      {species.map((specie, index) => (
-        <option key={index} value={specie}>
-          {specie}
-        </option>
-      ))}
-    </select>
+    <>
+      <label htmlFor="specie" className="select_title">
+        Select a species :
+      </label>
+      <select className="select_options" name="specie" onChange={handleSpecie}>
+        {species.map((specie, index) => (
+          <option key={index} value={specie}>
+            {specie}
+          </option>
+        ))}
+      </select>
+    </>
   );
 };
 
