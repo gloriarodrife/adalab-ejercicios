@@ -101,22 +101,3 @@ body {
   width: 100vw;
   align-items: center;
 }
-
-.select {
-  &_title {
-    font-size: 1.5rem;
-    color: rgba(207, 206, 206, 0.855);
-    padding-right: 5px;
-  }
-  &_options {
-    height: 30px;
-    width: 150px;
-    border-radius: 8px;
-    background-color: rgb(189, 186, 186);
-    color: rgba(24, 23, 23, 0.855);
-    font-weight: bold;
-  }
-}
-.input {
-  margin-right: 15px;
-}
