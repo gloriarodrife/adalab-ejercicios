@@ -1,6 +1,7 @@
 import '../styles/App.css';
 import { useEffect, useState } from 'react';
 import { callToApi } from '../services/api';
+import ItemsList from './ItemsList';
 // import ls from '../services/localStorage';
 // import { Link, Route, Routes } from 'react-router-dom';
 // import PropTypes from 'prop-types';
@@ -14,21 +15,11 @@ function App() {
   const handleInput = (event) => {
     const searchValue = event.target.value;
   };
-  const renderList = data.map((user) => {
-    return (
-      <li key={user.id} id={user.id}>
-        <img src={user.image} alt={user.name} />
 
-        <h2>
-          {user.name} {user.lastname}
-        </h2>
-      </li>
-    );
-  });
   return (
     <div className="App">
       <input type="text" onChange={handleInput} />
-      <ul>{renderList}</ul>
+      <ItemsList data={data} />
     </div>
   );
 }
