@@ -1,4 +1,4 @@
-const SpeciesFilter = () => {
+const SpeciesFilter = (props) => {
   const species = [
     'All',
     'Human',
@@ -9,8 +9,12 @@ const SpeciesFilter = () => {
     'Robot',
     'Mutant',
   ];
+
+  const handleSpecie = (event) => {
+    props.handleSpecieSelect(event.target.value);
+  };
   return (
-    <select name="specie">
+    <select name="specie" onChange={handleSpecie}>
       {species.map((specie) => (
         <option value={specie}>{specie}</option>
       ))}
