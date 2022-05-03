@@ -1,4 +1,5 @@
-import '../styles/App.css';
+import '../styles/App.scss';
+import '../styles/Header.scss';
 import { useEffect, useState } from 'react';
 import { callToApi } from '../services/api';
 import ls from '../services/localStorage';
@@ -8,7 +9,6 @@ import Header from './Header';
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo</h1>
       <Header />
     </div>
   );
