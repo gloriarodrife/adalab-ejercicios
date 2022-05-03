@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function MovieItem(props) {
+  const { id, name, synopsis } = props.movie;
+
   return (
     <>
-      <li key={props.movie.id} className="movies__item">
-        <h2 className="movies__title">{props.movie.name}</h2>
-        <p>{props.movie.synopsis}</p>
-        <Link to={`/movie/${props.movie.id}`}> Más info</Link>
+      <li key={id} className="movies__item">
+        <h2 className="movies__title">{name}</h2>
+        <p>{synopsis}</p>
+        <Link to={`/movie/${id}`}> Más info</Link>
       </li>
     </>
   );
@@ -17,5 +20,17 @@ MovieItem.defaultProps = {
     name: 'Not defined',
     synopsis: 'Not defined',
   },
+};
+
+// MovieItem.PropType = {
+//   movie: PropTypes.object,
+// };
+
+MovieItem.PropType = {
+  movie: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    synopsis: PropTypes.string,
+  }),
 };
 export default MovieItem;

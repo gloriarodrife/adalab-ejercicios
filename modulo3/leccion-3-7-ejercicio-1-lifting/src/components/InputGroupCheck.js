@@ -20,7 +20,7 @@ const InputGroupCheck = (props) => {
     </div>
   );
 };
-InputGroupCheck.prototype = {
+InputGroupCheck.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };

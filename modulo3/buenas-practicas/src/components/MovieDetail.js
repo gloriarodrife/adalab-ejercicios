@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
 import '../styles/MovieList.scss';
+import PropTypes from 'prop-types';
 
 function MovieDetail(props) {
   const { id } = useParams();
@@ -21,5 +22,9 @@ MovieDetail.defaultProps = {
     synopsis: 'Not defined',
     year: 'Not defined',
   },
+};
+
+MovieDetail.PropType = {
+  movie: PropTypes.object,
 };
 export default MovieDetail;

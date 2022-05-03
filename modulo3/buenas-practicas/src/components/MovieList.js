@@ -1,5 +1,6 @@
 import '../styles/MovieList.scss';
 import MovieItem from './MovieItem';
+import PropTypes from 'prop-types';
 
 function MovieList(props) {
   const htmlMovies = props.moviesList.map((movieItem, index) => {
@@ -17,5 +18,7 @@ function MovieList(props) {
 MovieList.defaultProps = {
   moviesList: [],
 };
-
+MovieList.PropType = {
+  moviesList: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default MovieList;

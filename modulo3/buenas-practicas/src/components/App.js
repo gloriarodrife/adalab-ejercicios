@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { matchPath, useLocation } from 'react-router';
 
-import getMovies from "../services/fetchMovies";
-import localStorage from "../services/localStorage";
+import getMovies from '../services/fetchMovies';
+import localStorage from '../services/localStorage';
 import Header from './Header';
 import MovieList from './MovieList';
 import MovieForm from './MovieForm';
@@ -15,25 +15,24 @@ import Home from './Home';
 function App() {
   // Variable estado que guardará un array de objetos con datos de películas
   // Al principio, estará vacio (valor por defecto: [])
-  const [movies, setMovies] = useState(localStorage.get("movies", []));
-
+  const [movies, setMovies] = useState(localStorage.get('movies', []));
 
   // Variable estado para tener los elementos del formulario controlados.
   // Usamos un objeto con una propiedad para cada elemento que guardará su value.
   const [newMovie, setNewMovie] = useState({
     id: '',
     name: '',
-    synopsis: ''
+    synopsis: '',
   });
 
   // Usamos un useEffect para ejecutar el fetch() una sóla vez al cargar la página.
   // El fetch() está en la función getMovies() del servicio fetchMovies.
   useEffect(() => {
     if (movies.length === 0) {
-      getMovies().then(data => {
-        localStorage.set("movies", data);
+      getMovies().then((data) => {
+        localStorage.set('movies', data);
         setMovies(data);
-      })
+      });
     }
   }, []);
 
@@ -42,7 +41,7 @@ function App() {
     // que se han recogido en el formulario.
 
     setMovies([...movies, newMovie]);
-  }
+  };
 
   // Función que se encarga de cambiar las variables estado.
   // Al ejecutarla, tenemos que indicar que propiedad/variable queremos cambiar (newTitle, newSynopsis)
@@ -51,9 +50,9 @@ function App() {
   const changeData = (nombreInput, valueInput) => {
     setNewMovie({
       ...newMovie,
-      [nombreInput]: valueInput
+      [nombreInput]: valueInput,
     });
-  }
+  };
 
   /**
    * http://localhost:3000/movies/list
@@ -61,47 +60,41 @@ function App() {
    * http://localhost:3000/
    */
 
-
   //buscar cual es la peli que quiero mostrar en detalle
   const { pathname } = useLocation(); // Obtengo la ruta de la aplicacion
 
-  const dataPath = matchPath("/movie/:id", pathname); //busco si coincide con la ruta dinámica 
+  const dataPath = matchPath('/movie/:id', pathname); //busco si coincide con la ruta dinámica
 
   const movieId = dataPath !== null ? dataPath.params.id : null; //buscando el id de la película
 
-  const movieFound = movies.find(item => item.id === movieId); //busco toda la info de la peli
-
+  const movieFound = movies.find((item) => item.id === movieId); //busco toda la info de la peli
 
   return (
     <div className="App">
       <Header title="Movies" />
 
       <Routes>
-        <Route
-          path='/'
-          element={<Home></Home>} />
+        <Route path="/" element={<Home></Home>} />
 
-        <Route path='/movies/list' element={<MovieList moviesList={movies} />} />
         <Route
-          path='/movies/new'
+          path="/movies/list"
+          element={<MovieList moviesList={movies} />}
+        />
+        <Route
+          path="/movies/new"
           element={
             <MovieForm
               newMovie={newMovie}
               addMovie={addMovie}
               changeData={changeData}
-            />} />
+            />
+          }
+        />
         <Route
-          path='/movie/:id' element={<MovieDetail movie={movieFound} />} //paso la info de la pelicula
+          path="/movie/:id"
+          element={<MovieDetail movie={movieFound} />} //paso la info de la pelicula
         />
       </Routes>
-
-
-
-
-
-
-
-
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Menu from './Menu';
+import PropTypes from 'prop-types';
 
 function Header(props) {
   return (
@@ -18,5 +19,7 @@ function Header(props) {
 Header.defaultProps = {
   title: 'No tiene titulo ',
 };
-
+Header.propTypes = {
+  title: PropTypes.string,
+};
 export default Header;
