@@ -47,14 +47,18 @@ function App() {
         handleSpecieSelect={handleSpecieSelect}
       />
       {/* // Buscar por personaje con un input */}
-
-      <Routes>
-        <Route path="/" element={<CharactersList data={dataFilterSpecie} />} />
-        <Route
-          path="/character/:id"
-          element={<CharacterDetail character={characterFound} />}
-        />
-      </Routes>
+      <main className="main">
+        <Routes>
+          <Route
+            path="/"
+            element={<CharactersList data={dataFilterSpecie} />}
+          />
+          <Route
+            path="/character/:id"
+            element={<CharacterDetail character={characterFound} />}
+          />
+        </Routes>
+      </main>
     </>
   );
 }
