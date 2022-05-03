@@ -13,7 +13,7 @@ const callToApi = async () => {
     return {
       fullName: ` ${data.name.first} ${data.name.last}`,
       id: data.login.uuid,
-      photo: data.picture,
+      image: data.picture,
       city: data.location.city,
       age: data.dob.age,
       email: data.email,
