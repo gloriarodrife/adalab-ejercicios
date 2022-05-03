@@ -18,6 +18,8 @@ function App() {
   return (
     <>
       <Header />
+      {/* // Buscar por personaje con un input */}
+
       <CharactersList data={data} />
     </>
   );
