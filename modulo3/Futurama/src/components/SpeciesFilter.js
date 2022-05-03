@@ -15,7 +15,7 @@ const SpeciesFilter = (props) => {
   };
   return (
     <>
-      <input type="text" className="select_options input" />
+      {/* <input type="text" className="select_options input" /> */}
       <label htmlFor="specie" className="select_title">
         Select a species :
       </label>
