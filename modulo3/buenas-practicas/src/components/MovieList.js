@@ -3,13 +3,18 @@ import MovieItem from './MovieItem';
 import PropTypes from 'prop-types';
 
 function MovieList(props) {
-  const htmlMovies = props.moviesList.map((movieItem, index) => {
+  const { moviesList } = props;
+  const htmlMovies = moviesList.map((movieItem, index) => {
     return <MovieItem className="movies__list" key={index} movie={movieItem} />;
   });
 
   return (
     <>
-      <ul className="movies__list">{htmlMovies}</ul>
+      {moviesList.length === 0 ? (
+        <p>Cargando datos...</p>
+      ) : (
+        <ul className="movies__list">{htmlMovies}</ul>
+      )}
     </>
   );
 }
