@@ -3,14 +3,15 @@ import '../styles/MovieList.scss';
 import PropTypes from 'prop-types';
 
 function MovieDetail(props) {
-  const { id } = useParams();
+  //   const { id } = useParams();
+  const { id, name, synopsis, year } = props.movie;
 
   return (
     <>
-      <li key={props.movie.id} className="movies__item movies__detail">
-        <h2 className="movies__title">{props.movie.name}</h2>
-        <p>{props.movie.synopsis}</p>
-        <p>{props.movie.year}</p>
+      <li key={id} className="movies__item movies__detail">
+        <h2 className="movies__title">{name}</h2>
+        <p>{synopsis}</p>
+        <p>{year}</p>
       </li>
     </>
   );
