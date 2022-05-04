@@ -11,14 +11,3 @@ const Item = (props) => {
 };
 
 export default Item;
-
-// const Item = (props) => {
-//   return (
-//     <li key={props.character.id}>
-//       <img src={props.character.image} alt="" />
-//       <h2>{props.character.name}</h2>
-//     </li>
-//   );
-// };
-
-// export default Item;

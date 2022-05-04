@@ -10,6 +10,7 @@ function App() {
 
   // Guardamos el valor del input
   const [search, setSearch] = useState('');
+
   // Llamamaos a la API para obtener los datos que queremos
   useEffect(() => {
     callToApi().then((response) => setdata(response));
@@ -20,8 +21,16 @@ function App() {
     return setSearch(searchValue);
   };
 
-  const characterFilter = data.filter((character) =>
-    character.name.toLowerCase().includes(search.toLowerCase()) ? true : false
+  const characterFilter = data.filter((item) =>
+    // item.name.toLowerCase().includes(search.toLowerCase()) ? true : false
+
+    {
+      if (item.name.toLowerCase().includes(search.toLowerCase())) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   );
 
   return (

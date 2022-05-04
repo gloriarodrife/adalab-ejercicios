@@ -8,13 +8,3 @@ const ItemsList = (props) => {
 };
 
 export default ItemsList;
-
-// const ItemsList = (props) => {
-//   const renderList = props.dataApi.map((character, index) => {
-//     return <Item key={index} character={character} />;
-//   });
-
-//   return <ul> {renderList}</ul>;
-// };
-
-// export default ItemsList;
