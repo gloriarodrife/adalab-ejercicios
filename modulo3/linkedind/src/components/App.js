@@ -41,13 +41,11 @@ function App() {
   // Filtra los usuarios cuyo pais sea igual al de la variable de estado
   const UserFilters = dataUsers
     .filter((user) => {
-      return filterCountry === 'All'
-        ? dataUsers
-        : user.country === filterCountry;
+      return filterCountry === 'All' ? true : user.country === filterCountry;
     })
     .filter((user) => {
       // Si la longiud del filtro de ciudad es cero devuelvelos todos
-      if (filterCities === 0) {
+      if (filterCities.length === 0) {
         return true;
       } else {
         return filterCities.includes(user.city);
