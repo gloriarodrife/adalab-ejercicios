@@ -10,6 +10,7 @@ import Filters from './Filters';
 function App() {
   const [dataUsers, setDataUsers] = useState([]);
   const [filterCountry, setFilterCountry] = useState('All');
+  const [filterCities, setFilterCities] = useState([]);
 
   useEffect(() => {
     callToApi().then((response) => setDataUsers(response));
@@ -20,11 +21,38 @@ function App() {
     setFilterCountry(value);
   };
 
+  // Creamos funcion en la que metemos las ciudades que recibimos
+  // Comprobamos que no se repitan
+  const handleFilterCity = (value) => {
+    if (filterCities.includes(value)) {
+      // Si filterCities NO !== tiene la ciudad que le paso, que meta la meta
+      const newCities = filterCities.filter((city) => city !== value);
+      setFilterCities(newCities);
+
+      // Otra manera con el splice
+      // const positionCity = filterCities.indexOf(value);
+      // const newCities = filterCities.splice(1, positionCity);
+      // setFilterCities(newCities);
+    } else {
+      setFilterCities([...filterCities, value]);
+    }
+  };
   // Variable que enviamos en la que los datos ya estan filtrados
   // Filtra los usuarios cuyo pais sea igual al de la variable de estado
-  const UserFilters = dataUsers.filter((user) => {
-    return filterCountry === 'All' ? dataUsers : user.country === filterCountry;
-  });
+  const UserFilters = dataUsers
+    .filter((user) => {
+      return filterCountry === 'All'
+        ? dataUsers
+        : user.country === filterCountry;
+    })
+    .filter((user) => {
+      // Si la longiud del filtro de ciudad es cero devuelvelos todos
+      if (filterCities === 0) {
+        return true;
+      } else {
+        return filterCities.includes(user.city);
+      }
+    });
 
   // Funcion que permite sacar solo las ciudades de los usuarios
   // Se la mandamos a filterCity
@@ -49,6 +77,7 @@ function App() {
       <div className="col2">
         <Filters
           handleFilterCountry={handleFilterCountry}
+          handleFilterCity={handleFilterCity}
           cities={getCities()}
         />
         <UserList users={UserFilters} />

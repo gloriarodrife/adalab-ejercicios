@@ -4,7 +4,10 @@ const Filters = (props) => {
   return (
     <form>
       <FilterCountry handleFilterCountry={props.handleFilterCountry} />
-      <FilterCity cities={props.cities} />
+      <FilterCity
+        cities={props.cities}
+        handleFilterCity={props.handleFilterCity}
+      />
     </form>
   );
 };
