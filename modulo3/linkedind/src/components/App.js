@@ -1,11 +1,11 @@
 import '../styles/App.css';
 import { useEffect, useState } from 'react';
 import { callToApi } from '../services/api';
-import ls from '../services/localStorage';
-import { Link, Route, Routes } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Route, Routes } from 'react-router-dom';
+import { matchPath, useLocation } from 'react-router';
 import UserList from './UserList';
 import Filters from './Filters';
+import UserDetail from './UserDetail';
 
 function App() {
   const [dataUsers, setDataUsers] = useState([]);
@@ -69,18 +69,40 @@ function App() {
     return uniqueCities;
   };
 
+  //buscar cual es el usuario que quiero mostrar en detalle
+  const { pathname } = useLocation(); // Obtengo la ruta de la aplicacion
+
+  const dataPath = matchPath('/user/:id', pathname); //busco si coincide con la ruta dinámica
+
+  const userId = dataPath !== null ? dataPath.params.id : null; //buscando el id del usuario
+
+  const userFound = dataUsers.find((user) => user.id === userId);
+  console.log(userFound);
   return (
     <>
       <h1 className="title--big">Directorio de personas</h1>
       {/* Envio el array con la lista de usuarios para poderpintar la lista  */}
 
       <div className="col2">
-        <Filters
-          handleFilterCountry={handleFilterCountry}
-          handleFilterCity={handleFilterCity}
-          cities={getCities()}
-        />
-        <UserList users={UserFilters} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  handleFilterCountry={handleFilterCountry}
+                  handleFilterCity={handleFilterCity}
+                  cities={getCities()}
+                />
+                <UserList users={UserFilters} />
+              </>
+            }
+          />
+          <Route
+            path="/user/:id"
+            element={<UserDetail userData={userFound} />}
+          />
+        </Routes>
       </div>
     </>
   );

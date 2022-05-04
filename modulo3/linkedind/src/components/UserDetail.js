@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-const User = (props) => {
+const UserDetail = (props) => {
   return (
-    <Link to={`/user/${props.userData.id}`}>
+    <Link to={props.userData.id}>
       <img
         className=""
         alt="Foto de Francisco Korth"
@@ -17,8 +17,14 @@ const User = (props) => {
       <p className="card__description">
         {props.userData.city} / {props.userData.age}
       </p>
+      <p className="card__description">
+        {props.userData.city} / {props.userData.age}
+      </p>
+      <p className="card__description">
+        {props.userData.city} / {props.userData.age}
+      </p>
     </Link>
   );
 };
 
-export default User;
+export default UserDetail;
