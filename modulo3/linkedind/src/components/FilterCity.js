@@ -2,7 +2,7 @@ const FilterCity = (props) => {
   const renderCities = () => {
     return props.cities.map((city, index) => (
       <li key={index}>
-        <label htmlFor="">{city}</label>
+        <label htmlFor="city">{city}</label>
         <input type="checkbox" name="city" id={index} />
       </li>
     ));
