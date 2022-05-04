@@ -6,6 +6,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import UserList from './UserList';
 import Filters from './Filters';
+
 function App() {
   const [dataUsers, setDataUsers] = useState([]);
   const [filterCountry, setFilterCountry] = useState('All');
@@ -26,20 +27,30 @@ function App() {
   });
 
   // Funcion que permite sacar solo las ciudades de los usuarios
-
+  // Se la mandamos a filterCity
   const getCities = () => {
     // Creo un nuevo array con todaslas ciudades
     const userCities = dataUsers.map((user) => user.city);
-    console.log(userCities);
+    // const uniqueCities = userCities.filter((item, index) => {
+    //   return userCities.indexOf(item) === index;
+    // });
+    //Creamos una constante y aplicamos el objeto set (estructura de datos)
+    const dataUniqueCities = new Set(userCities);
+    // El objeto que obtenemos lo convertimos en un array
+    let uniqueCities = [...dataUniqueCities];
+    return uniqueCities;
   };
-  getCities();
+
   return (
     <>
       <h1 className="title--big">Directorio de personas</h1>
       {/* Envio el array con la lista de usuarios para poderpintar la lista  */}
 
       <div className="col2">
-        <Filters handleFilterCountry={handleFilterCountry} />
+        <Filters
+          handleFilterCountry={handleFilterCountry}
+          cities={getCities()}
+        />
         <UserList users={UserFilters} />
       </div>
     </>
