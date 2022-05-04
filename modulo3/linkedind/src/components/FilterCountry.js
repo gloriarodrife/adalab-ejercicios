@@ -11,7 +11,7 @@ const FilterCountry = (props) => {
         className="form__input-text"
         onChange={handleChange}
       >
-        <option value="all">Todas</option>
+        <option value="All">Todas</option>
         <option value="Spain">Spain</option>
         <option value="Ireland">Ireland</option>
         <option value="United State">United State</option>
