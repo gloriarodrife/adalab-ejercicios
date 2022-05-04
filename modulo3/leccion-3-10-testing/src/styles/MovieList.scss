@@ -1,0 +1,46 @@
+.movies {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 30rem;
+    margin: 0 1rem 1rem 0;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+
+  &__new {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    margin: 2%;
+    width: 150px;
+    background-color: aquamarine;
+    padding: 0.5%;
+    border: none;
+  }
+  &__detail {
+    text-align: center;
+    list-style: none;
+  }
+}
