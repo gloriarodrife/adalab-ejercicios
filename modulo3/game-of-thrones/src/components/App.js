@@ -20,17 +20,9 @@ function App() {
     const searchValue = event.target.value;
     return setSearch(searchValue);
   };
-
+  console.log(data);
   const characterFilter = data.filter((item) =>
-    // item.name.toLowerCase().includes(search.toLowerCase()) ? true : false
-
-    {
-      if (item.name.toLowerCase().includes(search.toLowerCase())) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+    item.name.toLowerCase().includes(search.toLowerCase()) ? true : false
   );
 
   return (
