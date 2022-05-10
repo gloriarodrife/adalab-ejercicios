@@ -1,0 +1,15 @@
+{
+  "name": "leccion-4-1-ejercicio-4-lodash",
+  "version": "1.0.0",
+  "description": "lodash",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gloria",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
