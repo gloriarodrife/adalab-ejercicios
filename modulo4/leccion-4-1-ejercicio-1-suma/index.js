@@ -13,15 +13,15 @@ const myObject = {
 
 // Guardo el objeto en un nuevo fichero
 
-// const handleWriteFile = (err) => {
-//   if (err) {
-//     console.log('Error:', err);
-//   } else {
-//     console.log('The file has been saved!');
-//   }
-// };
+const handleWriteFile = (err) => {
+  if (err) {
+    console.log('Error:', err);
+  } else {
+    console.log('The file has been saved!');
+  }
+};
 
-// fs.writeFile('./output.txt', JSON.stringify(myObject), handleWriteFile);
+fs.writeFile('./output.txt', JSON.stringify(myObject), handleWriteFile);
 // Creamos la función de callback
 //Creamos constante
 
@@ -44,10 +44,6 @@ const writeFile = (fileName, fileContent, callback) => {
     }
   });
 };
-
-// fs.writeFile('./input-file.json', JSON.stringify(myObject), () => {
-
-// });
 
 readFile('./input-file.json', (fileContent) => {
   const newObject = {
