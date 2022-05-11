@@ -23,7 +23,7 @@ server.use(express.static(staticServerPath));
 // API: listen fetch requests
 
 // API request > GET > http://localhost:3000/users
-server.get('/users', (req, res) => {
+server.post('/users', (req, res) => {
   const response = {
     users: [{ name: 'Sofía' }, { name: 'María' }],
   };

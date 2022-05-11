@@ -1,16 +1,12 @@
 // get users data
 
 document.querySelector('.js-btn-get-users').addEventListener('click', () => {
-  fetch(
-    'http://localhost:3500/users'
-    // {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(),
-    // }
-  )
+  fetch('http://localhost:3500/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
     .then((response) => response.json())
     .then((responseData) => {
       console.log('Data:', responseData);
