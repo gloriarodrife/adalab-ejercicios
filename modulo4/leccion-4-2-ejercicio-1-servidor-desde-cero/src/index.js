@@ -1,7 +1,9 @@
+// Importamos modulos express y cors
+
 const express = require('express');
 const cors = require('cors');
 
-// create server
+// create server, ejecuto funcion express
 const server = express();
 
 // set express middleware
@@ -25,7 +27,7 @@ server.use(express.static(staticServerPath));
 // API request > GET > http://localhost:3000/users
 server.get('/users', (req, res) => {
   const response = {
-    users: [{ name: 'Sofía' }, { name: 'María' }]
+    users: [{ name: 'Sofía' }, { name: 'María' }],
   };
   res.json(response);
 });
@@ -33,9 +35,11 @@ server.get('/users', (req, res) => {
 // API request > POST > http://localhost:3000/new-user
 server.post('/new-user', (req, res) => {
   // console request body params
-  console.log(`Creating the user in database with user name: "${req.body.userName}"`);
+  console.log(
+    `Creating the user in database with user name: "${req.body.userName}"`
+  );
   const response = {
-    result: `User created: ${req.body.userName}`
+    result: `User created: ${req.body.userName}`,
   };
   res.json(response);
 });
