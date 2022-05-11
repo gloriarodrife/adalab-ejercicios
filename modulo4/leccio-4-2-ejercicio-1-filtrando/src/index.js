@@ -33,7 +33,6 @@ server.post('/user', (req, res) => {
   users.push({
     name: req.query.userName,
     email: req.query.userEmail,
-    filterByName: req.query.filterByName,
   });
 
   res.json({
@@ -43,6 +42,11 @@ server.post('/user', (req, res) => {
 
 server.get('/users', (req, res) => {
   res.json({
-    result: users,
+    result: users.filter((user) =>
+      user.name === req.query.filterByName ||
+      user.email === req.query.filterByEmail
+        ? true
+        : false
+    ),
   });
 });

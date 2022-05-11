@@ -5,10 +5,8 @@ document
   .addEventListener('click', () => {
     const inputName = document.querySelector('.js-input-name');
     const inputEmail = document.querySelector('.js-input-email');
-    const filterByName = document.querySelector('.js-input-filterByName');
-
     // create query params
-    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}&filterByName=${filterByName.value}`;
+    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}`;
 
     fetch('http://localhost:3000/user' + queryParams, { method: 'POST' })
       .then((response) => response.json())
@@ -21,7 +19,12 @@ document
 // get users data
 
 document.querySelector('.js-btn-get-users').addEventListener('click', () => {
-  fetch('http://localhost:3000/users')
+  const filterByName = document.querySelector('.js-input-filterByName');
+  const filterByEmail = document.querySelector('.js-input-filterByEmail');
+
+  fetch(
+    `http://localhost:3000/users?filterByName=${filterByName.value}&filterByEmail=${filterByEmail.value}`
+  )
     .then((response) => response.json())
     .then((responseData) => {
       console.log('Server response:', responseData);
