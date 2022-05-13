@@ -48,8 +48,13 @@ server.post('/api/names', (req, res) => {
   console.log(req.body);
   console.log(res.body);
 
-  names.push(req.body.name);
-  res.json({ status: 'Ok' });
+  if (names.includes(req.body.name)) {
+    // Enviamos el codigo de estado que no todo ha ido bien
+    res.json({ status: 'Error', message: 'Repeat' }, 406);
+  } else {
+    names.push(req.body.name);
+    res.json({ status: 'Ok' });
+  }
 });
 
 server.get('/api/names', (req, res) => {
