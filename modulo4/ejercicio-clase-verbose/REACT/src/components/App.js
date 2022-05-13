@@ -8,7 +8,7 @@ function App() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('')
+    fetch('http://localhost:3000/api/names')
       .then((response) => response.json())
       .then((data) => {
         setNames(data);
@@ -30,8 +30,10 @@ function App() {
   };
 
   const getErrorLink = (errorMessage) => {
-    return `https://stackoverflow.com/search?q=${encodeURIComponent(error.message)}`;
-  }
+    return `https://stackoverflow.com/search?q=${encodeURIComponent(
+      error.message
+    )}`;
+  };
 
   return (
     <div>
@@ -44,7 +46,9 @@ function App() {
         {!!error && (
           <div className="mt-1 mb-1">
             <p className="text--error">{error.message}</p>
-            <a href={getErrorLink(error.message)} title="Ver en StackOverflow">Más info</a>
+            <a href={getErrorLink(error.message)} title="Ver en StackOverflow">
+              Más info
+            </a>
           </div>
         )}
         <NameList names={names} />
