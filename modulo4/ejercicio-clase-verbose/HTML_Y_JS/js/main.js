@@ -1,5 +1,3 @@
-'use strict';
-
 const namesList = document.querySelector('.js_list');
 const nameInput = document.querySelector('.js_newName_input');
 const form = document.querySelector('.js_form');
@@ -7,10 +5,10 @@ const form = document.querySelector('.js_form');
 const names = [];
 
 function loadNames() {
-  fetch('')
+  fetch('http://localhost:3000/api/names')
     .then((response) => response.json())
     .then((data) => {
-      data.forEach( (name) => {
+      data.forEach((name) => {
         names.push(name);
       });
       renderNames();
@@ -22,7 +20,7 @@ function loadNames() {
 
 function renderNames() {
   let html = '';
-  names.forEach( (name) => {
+  names.forEach((name) => {
     html += `
       <li class="item">
         ${name}
