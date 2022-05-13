@@ -34,6 +34,19 @@ function handleSubmit(ev) {
   const newName = nameInput.value;
   console.log(newName);
 
+  // Hacemos un fecth para mandar datos al servidor
+
+  fetch('http://localhost:3000/api/names', {
+    method: 'POST', // También se usa GET, PUT, DELETE
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ newName }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
   names.push(newName);
   nameInput.value = '';
   renderNames();

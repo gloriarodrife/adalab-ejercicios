@@ -43,6 +43,14 @@ server.get('/', (req, res) => {
 //  - limit para poner un tope máximo de resultados. Por defecto son todos
 //  - search para que filtre los nombres según ese parámetro. Por defecto devuelve todos
 // Devolverá al navegador un array JSON con una lista de nombres como String.
+server.post('api/names', (req, res) => {
+  console.log('ESTAS QUERIENDO METER DATOS');
+  console.log(req.body);
+  console.log(res.body);
+
+  names.push(req.body.name);
+  res.json({ status: 'Ok' });
+});
 
 server.get('/api/names', (req, res) => {
   // Este log se muestra en la terminal donde se ejecuta el servidor:
