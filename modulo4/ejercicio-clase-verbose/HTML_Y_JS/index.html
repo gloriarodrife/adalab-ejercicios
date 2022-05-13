@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+      rel="stylesheet"
+      href="http://beta.adalab.es/resources/stylesheets/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles/main.css"
+  />
+  <title>Ejemplo con ExpressJS</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Adalabers</h1>
+  </header>
+  <main class="page">
+    <h2 class="subtitle">...que molan</h2>
+    <div class="text--error mt-1 mb-1 hidden">
+      <p class="js_error">Oh no!</p>
+      <a class="js_link"
+         href="https://stackoverflow.com/search?q=Unexpected%20token%20%3C%20in%20JSON%20at%20position%200">
+        Más info
+      </a>
+    </div>
+    <ul class="js_list list"></ul>
+    <form class="js_form form mt-1 mb-1">
+      <label class="form__label" for="name">
+        Nuevo nombre:
+      </label>
+      <input autofocus class="js_newName_input form__input-text" type="text" name="newName" id="name" />
+      <button class="form__btn block">
+        Guardar
+      </button>
+    </form>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
