@@ -1,18 +1,46 @@
 const express = require('express');
 const cors = require('cors');
-
+const data = require('./data/users.json');
 // create server
-const server = express();
+const app = express();
 
-server.use(cors());
-server.use(express.json());
+app.use(cors());
+app.use(express.json());
 
 // init express aplication
 const serverPort = 3000;
-server.listen(serverPort, () => {
+app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-// STATIC SERVER: listen files in public folder
-const staticServerPath = './public';
-server.use(express.static(staticServerPath));
+app.get('/users/:userId', (req, res) => {
+  console.log(req.params);
+
+  const character = () => {
+    const foundCharacter = data.results.find(
+      (character) => character.id === parseInt(req.params.userId)
+    );
+    if (foundCharacter) {
+      res.json(foundCharacter);
+    } else {
+      res.json({ result: 'Personaje no encontrado' });
+    }
+  };
+
+  res.json(character());
+});
+
+app.get('/users/:userId/episodes', (req, res) => {
+  const character = () => {
+    const foundCharacter = data.results.find(
+      (character) => character.id === parseInt(req.params.userId)
+    );
+    if (foundCharacter) {
+      res.json(foundCharacter.episode);
+    } else {
+      res.json({ result: 'Personaje no encontrado' });
+    }
+  };
+
+  res.json(character());
+});
