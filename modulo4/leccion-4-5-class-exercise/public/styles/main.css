@@ -1,0 +1,42 @@
+.title {
+  line-height: 2em;
+  text-align: center;
+  height: 2em;
+  background-color: darkmagenta;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.list {
+  margin-left: 2em;
+  list-style-type: none;
+}
+
+.list > .item {
+  line-height: 1.5em;
+}
+
+.photo__profile {
+  width: 20em;
+  float: left;
+  margin: 2em;
+}
+
+.content__profile {
+  max-width: 600px;
+  margin: 2em auto 1em auto;
+}
+
+.content__profile > p {
+  margin-bottom: 2em;
+  text-align: justify;
+}
+
+.menu__bottom {
+  max-width: 600px;
+  margin: 0.5em auto;
+  text-align: right;
+}
